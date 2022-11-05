@@ -2,7 +2,7 @@ import React from "react";
 import "./tasksFilter.css";
 
 function Footer({
-  filter, onFilterChange,
+  changeTask, onFilterChange,
 }) {
   const buttons = [
     { name: "all", label: "All" },
@@ -11,7 +11,7 @@ function Footer({
   ];
 
   const elements = buttons.map(({ name, label }) => {
-    const isActive = filter === name;
+    const isActive = changeTask === name;
     const clazz = isActive ? "selected" : "button";
     return (
       <button
@@ -19,6 +19,7 @@ function Footer({
         key={name}
         className={`${clazz}`}
         onClick={() => onFilterChange(name)}
+
       >
         {label}
       </button>
