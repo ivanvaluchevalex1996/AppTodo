@@ -1,7 +1,7 @@
 import React from "react";
 import "./tasksFilter.css";
 
-function Footer({
+function TaskFilter({
   changeTask, onFilterChange,
 }) {
   const buttons = [
@@ -27,4 +27,4 @@ function Footer({
   });
   return <div className="filters">{elements}</div>;
 }
-export default Footer;
+export default TaskFilter;
