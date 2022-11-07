@@ -1,9 +1,12 @@
 import React from "react";
-import { formatDistanceToNow } from "date-fns";
+// import { formatDistanceToNow } from "date-fns";
+
 import "./task.css";
+import Timer from "../Timer/timer";
 
 function Task({
-  label, onDeleted, onToggleDone, done, taskId, date,
+  label, onDeleted, onToggleDone, done, taskId,
+  // label, onDeleted, onToggleDone, done, taskId, date,
 }) {
   let nameClass = "";
   if (done) {
@@ -21,12 +24,16 @@ function Task({
         />
         <label htmlFor={`todo-${taskId}`}>
           <span className="description">{label}</span>
-          <span className="created">
+          {/* <div className="buttons_click">
+            <button type="button" className="icon icon-play" />
+            <button type="button" className="icon icon-pause" />
+          </div> */}
+          {/* <span className="created">
             {`created ${formatDistanceToNow(
               date,
             )} ago`}
-
-          </span>
+          </span> */}
+          <Timer />
         </label>
         <button type="button" className="icon icon-edit" />
         <button

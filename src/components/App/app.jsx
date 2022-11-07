@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import NewTaskForm from "../NewTaskForm";
 import TaskList from "../TaskList/taskList";
 import "./app.css";
+// import Timer from "../Timer/timer";
 
 function App() {
   const [tasks, setTasks] = useState([{

@@ -141,6 +141,63 @@ html .clear-completed:active {
   text-decoration: underline;
 }
 
+/* timer style */
+
+/* .buttons_click{
+  display: flex;
+  flex-direction: column;
+} */
+
+.buttons{
+  top: 29px;
+  left: 80px;
+  display: inline-block;
+  position: absolute;
+}
+
+.app{
+  display: flex;
+  position: relative;
+  margin-right: 38px;
+}
+
+.icon-pause:after{
+  content: '⏸';
+  position: absolute;
+  top: -5px;
+  left: -4px;
+}
+
+.todo-list li .icon-destroy{
+  bottom: -6px!important;
+}
+
+.timer{
+  color: #4d4d4d;
+}
+
+.created{
+  width: 100px;
+}
+
+.todo-list li .icon-pause,
+.todo-list li .icon-play {
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.todo-list li .icon-play {
+	font-size: 15px;
+}
+
+.icon-pause:after {
+	content: '⏸';
+}
+
+.icon-play:after {
+	content: '▶';
+}
 /*
 	Hack to remove background from Mobile Safari.
 	Can't use it globally since it destroys checkboxes in Firefox
