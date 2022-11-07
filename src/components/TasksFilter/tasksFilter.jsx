@@ -2,7 +2,7 @@ import React from "react";
 import "./tasksFilter.css";
 
 function TaskFilter({
-  changeTask, onFilterChange,
+  filtered, onFilterChange,
 }) {
   const buttons = [
     { name: "all", label: "All" },
@@ -11,7 +11,7 @@ function TaskFilter({
   ];
 
   const elements = buttons.map(({ name, label }) => {
-    const isActive = changeTask === name;
+    const isActive = filtered === name;
     const clazz = isActive ? "selected" : "button";
     return (
       <button

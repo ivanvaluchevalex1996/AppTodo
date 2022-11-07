@@ -4,7 +4,8 @@ import TaskFilter from "../TasksFilter";
 import "./footer.css";
 
 function Footer({
-  filter, onFilterChange, clearTaskMy, leftItems,
+
+  clearTaskMy, leftItems, onFilterChange, filtered,
 }) {
   return (
     <footer className="footer">
@@ -13,7 +14,8 @@ function Footer({
         {" "}
         items left
       </span>
-      <TaskFilter filter={filter} onFilterChange={onFilterChange} />
+      <TaskFilter filtered={filtered} onFilterChange={onFilterChange} />
+
       <button type="button" className="clear-completed" onClick={clearTaskMy}>
         Clear completed
       </button>
